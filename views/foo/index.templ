@@ -1,5 +1,9 @@
 package foo
 
+import "github.com/rayantx/gohtmxpr/views/layouts"
+
 templ Index() {
-	<div>hello</div>
+	@layouts.Base() {
+		<div>hello from the other side</div>
+	}
 }
