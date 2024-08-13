@@ -18,7 +18,7 @@ func main() {
 	router := chi.NewMux()
 
 	router.Handle("/*", public())
-	router.Get("/fooo", handlers.Make(handlers.HandleFoo))
+	router.Get("/", handlers.Make(handlers.HandleHome))
 
 	listenAddr := os.Getenv("LISTEN_ADDR")
 	slog.Info("HTTP server started", "listenAddr", listenAddr)
